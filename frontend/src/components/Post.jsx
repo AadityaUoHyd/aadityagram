@@ -34,8 +34,8 @@ const Post = ({ post }) => {
     const likeOrDislikeHandler = async () => {
         try {
             const action = liked ? 'dislike' : 'like';
-            //const res = await axios.get(`https://instaclone-g9h5.onrender.com/api/v1/post/${post._id}/${action}`,
-            const res = await axios.get(`http://localhost:8000/api/v1/post/${post._id}/${action}`,
+            const res = await axios.get(`https://aadityagram.onrender.com/api/v1/post/${post._id}/${action}`,
+            //const res = await axios.get(`http://localhost:8000/api/v1/post/${post._id}/${action}`,
             { withCredentials: true });
             console.log(res.data);
             if (res.data.success) {
@@ -61,8 +61,8 @@ const Post = ({ post }) => {
     const commentHandler = async () => {
 
         try {
-            //const res = await axios.post(`https://instaclone-g9h5.onrender.com/api/v1/post/${post._id}/comment`,
-            const res = await axios.post(`http://localhost:8000/api/v1/post/${post._id}/comment`,
+            const res = await axios.post(`https://aadityagram.onrender.com/api/v1/post/${post._id}/comment`,
+            //const res = await axios.post(`http://localhost:8000/api/v1/post/${post._id}/comment`,
                 { text }, {
                 headers: {
                     'Content-Type': 'application/json'
@@ -89,8 +89,8 @@ const Post = ({ post }) => {
 
     const deletePostHandler = async () => {
         try {
-            //const res = await axios.delete(`https://instaclone-g9h5.onrender.com/api/v1/post/delete/${post?._id}`,
-            const res = await axios.delete(`http://localhost:8000/api/v1/post/delete/${post?._id}`,
+            const res = await axios.delete(`https://aadityagram.onrender.com/api/v1/post/delete/${post?._id}`,
+            //const res = await axios.delete(`http://localhost:8000/api/v1/post/delete/${post?._id}`,
             { withCredentials: true })
             if (res.data.success) {
                 const updatedPostData = posts.filter((postItem) => postItem?._id !== post?._id);
@@ -105,8 +105,8 @@ const Post = ({ post }) => {
 
     const bookmarkHandler = async () => {
         try {
-            //const res = await axios.get(`https://instaclone-g9h5.onrender.com/api/v1/post/${post?._id}/bookmark`,
-            const res = await axios.get(`http://localhost:8000/api/v1/post/${post?._id}/bookmark`,
+            const res = await axios.get(`https://aadityagram.onrender.com/api/v1/post/${post?._id}/bookmark`,
+            //const res = await axios.get(`http://localhost:8000/api/v1/post/${post?._id}/bookmark`,
             {withCredentials:true});
             if (res.data.success) {
                 // Toggle the bookmark state

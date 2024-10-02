@@ -26,8 +26,8 @@ const Login = () => {
         e.preventDefault();
         try {
             setLoading(true);
-            //const res = await axios.post('https://instaclone-g9h5.onrender.com/api/v1/user/login',
-            const res = await axios.post('http://localhost:8000/api/v1/user/login',
+            const res = await axios.post('https://aadityagram.onrender.com/api/v1/user/login',
+            //const res = await axios.post('http://localhost:8000/api/v1/user/login',
                 input, {
                 headers: {
                     'Content-Type': 'application/json'
